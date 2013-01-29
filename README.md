@@ -1,4 +1,4 @@
-bourbon
+Bourbon
 =======
 
-A Flask-powered CMS project.
+A Flask-powered content management system.
