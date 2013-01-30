@@ -12,9 +12,9 @@ page = Blueprint('page', __name__)
 
 @page.route("/pages/<page_id>")
 def view(page_id):
-    pass
+    return "look at a page"
 
 
 @page.route("/pages/<page_id>/edit")
 def edit(page_id):
-    pass
+    return "edit a page"
