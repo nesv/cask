@@ -3,11 +3,13 @@
 # Bourbon is a Flask-powered content management system.
 #
 from argparse import ArgumentParser
+from blueprints.page import page
 from flask import Flask
 import os
 
 
 bourbon = Flask(__name__.split(".")[0])
+bourbon.register_blueprint(page)
 
 
 @bourbon.route("/")
