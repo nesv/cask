@@ -6,6 +6,13 @@ from argparse import ArgumentParser
 from blueprints.page import page
 from flask import Flask
 import os
+import sys
+
+try:
+    from flask.ext.sqlalchemy import SQLAlchemy
+except ImportError:
+    print "You need to install the Flask-SQLAlchemy extension."
+    sys.exit(os.EX_SOFTWARE)
 
 
 bourbon = Flask(__name__.split(".")[0])
