@@ -2,6 +2,7 @@
 
 from argparse import ArgumentParser
 from bourbon import app
+import os
 
 if __name__ == "__main__":
     parser = ArgumentParser()
@@ -16,7 +17,7 @@ if __name__ == "__main__":
     host, port = args.address.split(":")
 
     # Load the configurations in.
-    app.config.from_pyfile(args.settings_module)
+    app.config.from_pyfile("{0}/{1}".format(os.getcwd(), args.settings_module))
 
     # Finally, run the app.
     app.run(host=host, port=int(port))
