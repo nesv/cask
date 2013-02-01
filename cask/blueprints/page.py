@@ -4,9 +4,11 @@ page.py
 This module holds a blueprint for page-related actions, as well as any database
 models.
 """
+from __future__ import absolute_import
+
 from flask import Blueprint, render_template
-from bourbon import db
-from bourbon.blueprints.user import User
+from .. import db
+from .user import User
 
 
 # Database models.

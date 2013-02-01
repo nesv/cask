@@ -4,7 +4,8 @@ user.py
 This module holds the blueprint and database models for anything remotely
 user-related.
 """
-from bourbon import db
+from __future__ import absolute_import
+from .. import db
 from flask import Blueprint
 
 class User(db.Model):

@@ -1,5 +1,5 @@
 """
-Bourbon is a Flask-powered content management system.
+Cask is a Flask-powered content management system.
 """
 from flask import Flask, render_template
 import os
@@ -13,10 +13,10 @@ except ImportError:
 app = Flask(__name__.split(".")[0])
 db = SQLAlchemy(app)
 
-from blueprints.page import page
+from .blueprints.page import page
 app.register_blueprint(page, url_prefix="/pages")
 
-from blueprints.user import user
+from .blueprints.user import user
 app.register_blueprint(user)
 
 
