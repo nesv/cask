@@ -1,20 +1,52 @@
+ @import url(http://fonts.googleapis.com/css?family=Oxygen:300|Marvel:700);
+
 body {
     margin: 0;
     padding: 0;
+    font-family: Oxygen;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 20pt;
+}
+
+h1 .tagline {
+    color: #bbb;
+    font-style: italic;
+    font-size: 13pt;
+    margin-left: 25px;
 }
 
 body header {
-    background: #222;
+    background: rgb(35, 31, 32);
     width: 100%;
     height: 128px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 200px;
+}
+
+header h1 {
+    color: #eee;
+    font-size: 24pt;
+    line-height: 80px;
 }
 
 #content {
-    margin-left: 200px;
+    margin-left: 128px;
+    margin-right: 128px;
+    margin-top: 140px;
 }
 
 img.logo {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Marvel;
+    font-weight: 700;
 }
